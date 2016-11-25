@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型</title>
+</head>
+<body>
+<script>
+    var Car = {
+        name:"Car",
+        color:"red",
+        status:"stop"
+    }
+
+//    创建一个以Car为原型新的对象，赋值给new_car
+//    var new_car = Object.create(Car);
+//    new_car.type  = "aodi";
+//    new_car.status = "run";
+//    console.log(new_car.status,new_car.type);
+
+//    形参，函数声明，变量
+//        function func() {
+//            return function(){
+//                alert(1);
+//            }
+//        }
+//        var a = func();
+//    闭包的使用：封装和场景保存
+     var test = 1;
+     var a = test = 1;
+//    下面两种可以用delete删除
+     window.test = 1;
+     test = 1;
+
+
+</script>
+</body>
+</html>

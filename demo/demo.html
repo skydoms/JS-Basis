@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+//变量提前机制
+    console.log(a);// undefined
+    console.log(b);// 报错:b is not defind
+    var a = 20;
+
+    aA();   // aA
+    function aA() {
+        console.log("aA");
+    }
+
+    console.log(aB());  // 报错：aB is not a function
+    var aB = function () {
+        return "aB";
+    }
+
+//解析：在JS中，声明一个变量（函数），声明会被提前代码顶部（函数体顶部），但是注意赋值（也叫初始化）并不提前，所以有了undefined和...is  not defind两种结果。
+//声明提前，这一步是JS引擎预编译完成的，也就是带代码运行之前
+
+
+//变量作用域
+    var b = 10;
+    (function () {
+        function func() {
+            var b = 3
+            console.log(b);
+        }
+        func(); // 3
+    })();
+//解析：在JS只有全局作用域和函数作用域（ES6当中加入了块级作用域），在函数体内， 局部变量会覆盖全局变量。
+
+
+
+
+
+</script>
+</body>
+</html>
